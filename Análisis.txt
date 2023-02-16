@@ -39,12 +39,11 @@ Si no está casad@, no se aplicará recargo por estado civil
 
 Recargo por dependientes:
 Si tiene hij@s, ingresar # de hij@s.
-Si hij@ tiene entre 18-24 años, 10% del precio base
-Si hij@ tiene entre 25-49 años, 20% del precio base
-Si hij@ tinee más de 50 años, 30% del precio base
+Se hará un recargo de 20% por cada hijo.
 Si no tiene hij@s, no se aplicará recargo por dependientes
 
 Adicional: Si el asegurado tiene propiedades, se aplicará un 35% del precio 
-base.
+base, por cada propiedad.
+Si no tiene propiedades, no se aplicará recargo por propiedades.
 Se aplicará un recargo del 5% por el salario del asegurado.
 

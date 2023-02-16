@@ -1,49 +1,112 @@
-La empresa TK-U trabaja haciendo cotizaciones diarias para clientes o asegurados.
+ALGORITMO
+El precio base de una cotización es Q2000
 
-Problema: Actualmente el trabajo se hace manual, por lo que, sólo se logra 
-hacer 50 cotizaciones por día.  Esto representa retraso en la entrega de coti-
-zaciones a los clientes y perder nuevos posibles clientes.
+Inicio
+	Declara precioBase como flotante
+	Declara valorCotizacion como flotante
+	Declara salario como flotante
+	Declara cargoXEdad como flotante
+	Declara cargoXDependientes como flotante
+	Declara cargoXPropiedades como flotante
+	Declara cargoXIngresos como flotante
+	
+	Declara numHijos como entero
+	Declara numPropiedades como entero
+	Declara primNombre como cadena
+	Declara segNombre como cadena
+	Declara primApellido como cadena
+	Declara segApellido como cadena
+	Declara estadoCivil como cadena
+	Declara pregunta como cadena
+	Declara tieneHijos como caracter
+	Declara tienePropiedades como caracter	
+	Declara seguir como booleano
+	
 
-Objetivo: Se espera automatizar el proceso de generar cotizaciones para que,
-se reduzca el tiempo que toma generar una.
-Aumente el número de cotizaciones generadas por día.
+	seguir = verdadero
+	Mientras seguir sea igual a verdadero
+	
+		Ingrese 1er nombre del cliente
+		Leer primNombre
+		Ingrese 2do nombre del cliente
+		Leer segNombre
+		Ingrese 1er apellido del cliente
+		Leer primApellido
+		Ingrese 2do apellido del cliente
+		Leer segApellido
+		Ingrese edad del cliente
+		Si edad de cliente es mayor o igual a 18 años
+		entonces
+			Si edad de cliente es mayor o igual a 18 y menor o igual a 24
+			entonces
+				cargoXEdad = precioBase * 0.1
+			Sino
+				Si edad de cliente es mayor o igual a 25 y menor o igual a 49
+				entonces
+					cargoXEdad = precioBase * 0.2
+				Sino
+				Si edad de cliente es mayor o igual a 50
+				entonces
+					cargoXEdad = precioBase * 0.3
+		Sino
+		cargoXEdad = 0
+	
+		Ingrese el estado civil del cliente
+		Si estadoCivil es igual a Casado
+		entonces
+			Ingrese edad de cónyuge
+			Si edad de cónyuge es mayor o igual a 18 años
+			entonces
+				Si edad de cónyuge es mayor o igual a 18 y menor o igual a 24
+				entonces
+					cargoXEdad = cargoXEdad + (precioBase * 0.1)
+				Sino
+					Si edad de cónyuge es mayor o igual a 25 y menor o igual a 49
+					entonces
+						cargoXEdad = cargoXEdad + (precioBase * 0.2)
+					Sino
+						Si edad de cónyuge es mayor o igual a 50
+						entonces
+							cargoXEdad = cargoXEdad + (precioBase * 0.3)	
+		Sino
+		cargoXEdad = cargoXEdad + 0
+	
+		Indique si el cliente hijos S/N
+		Si tieneHijos es igual a S
+		entonces
+			Indique el número de hijos
+			Si numHijos es mayor a 0
+			entonces
+				cargoXDependientes = (precioBase * 0.2) * numHijos
+			Sino
+				cargoXDependientes = 0
 
-Entradas: Se tiene un programa base que se debe revisar y modificar según
-corresponda.
+		Indique si el cliente tiene propiedades S/N
+		Si tienePropiedades es igual a S
+		entonces
+			Indique el número de propiedades
+			Si numPropiedades es mayor a 0
+			entonces
+				cargoXPropiedades = (precioBase * 0.35) * numPropiedades
+			Sino
+				cargoXPropiedades = 0
 
-Salidas: 
-Programa base modificado que, considere las diferentes condiciones
-que hacen que el precio de la cotización base reciba uno o más recargos.
+		Indique el monto de los ingresos del cliente
+		Si salario es mayor a 0
+		entonces
+			cargoXIngresos = (precioBase * 0.05) * salario
+		Sino
+			cargoXIngresos = 0
 
-Documentación del problema.
+		ValorCotizacion = precioBase + cargoXEdad + cargoXDependientes + cargoXPropiedades + cargoXIngresos
 
-Documentación de la solución.
-
-Adicional: El programa debe procesar un número indefinido de cotizaciones que
-finalizará cuando el usuario digite la palabra "salir".
-
-Solución:
-El programa modificado debe tomar en cuenta las distintas condiciones que
-recargan el precio del plan base, en la cotización:
-
-Recargo por edad: 
-Asegurado está entre 18-24 años, 10% del precio base
-Asegurado está entre 25-49 años, 20% del precio base
-Asegurado tiene más de 50 años, 30% del precio base
-
-Recargo por estado civil:
-Si está casad@ y cónyuge está entre 18-24 años, 10% del precio base
-Si está casad@ y cónyuge está entre 25-49 años, 20% del precio base
-Si está casad@ y cónyuge tiene más de 50 años, 30% del precio base
-Si no está casad@, no se aplicará recargo por estado civil
-
-Recargo por dependientes:
-Si tiene hij@s, ingresar # de hij@s.
-Se hará un recargo de 20% por cada hijo.
-Si no tiene hij@s, no se aplicará recargo por dependientes
-
-Adicional: Si el asegurado tiene propiedades, se aplicará un 35% del precio 
-base, por cada propiedad.
-Si no tiene propiedades, no se aplicará recargo por propiedades.
-Se aplicará un recargo del 5% por el salario del asegurado.
-
+		Escribir "El precio de la cotización es: ", ValorCotizacion
+		Ingresar una nueva cotizacion, teclee Si
+		Para Terminar, teclee Salir
+		Si pregunta es igual a Salir
+ 		entonces
+			seguir = falso
+		Sino
+			seguir = verdadero
+	FinMientras
+Fin

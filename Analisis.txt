@@ -1,0 +1,50 @@
+La empresa TK-U trabaja haciendo cotizaciones diarias para clientes o asegurados.
+
+Problema: Actualmente el trabajo se hace manual, por lo que, sólo se logra 
+hacer 50 cotizaciones por día.  Esto representa retraso en la entrega de coti-
+zaciones a los clientes y perder nuevos posibles clientes.
+
+Objetivo: Se espera automatizar el proceso de generar cotizaciones para que,
+se reduzca el tiempo que toma generar una.
+Aumente el número de cotizaciones generadas por día.
+
+Entradas: Se tiene un programa base que se debe revisar y modificar según
+corresponda.
+
+Salidas: 
+Programa base modificado que, considere las diferentes condiciones
+que hacen que el precio de la cotización base reciba uno o más recargos.
+
+Documentación del problema.
+
+Documentación de la solución.
+
+Adicional: El programa debe procesar un número indefinido de cotizaciones que
+finalizará cuando el usuario digite la palabra "salir".
+
+Solución:
+El programa modificado debe tomar en cuenta las distintas condiciones que
+recargan el precio del plan base, en la cotización:
+
+Recargo por edad: 
+Asegurado está entre 18-24 años, 10% del precio base
+Asegurado está entre 25-49 años, 20% del precio base
+Asegurado tiene más de 50 años, 30% del precio base
+
+Recargo por estado civil:
+Si está casad@ y cónyuge está entre 18-24 años, 10% del precio base
+Si está casad@ y cónyuge está entre 25-49 años, 20% del precio base
+Si está casad@ y cónyuge tiene más de 50 años, 30% del precio base
+Si no está casad@, no se aplicará recargo por estado civil
+
+Recargo por dependientes:
+Si tiene hij@s, ingresar # de hij@s.
+Si hij@ tiene entre 18-24 años, 10% del precio base
+Si hij@ tiene entre 25-49 años, 20% del precio base
+Si hij@ tinee más de 50 años, 30% del precio base
+Si no tiene hij@s, no se aplicará recargo por dependientes
+
+Adicional: Si el asegurado tiene propiedades, se aplicará un 35% del precio 
+base.
+Se aplicará un recargo del 5% por el salario del asegurado.
+

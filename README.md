@@ -14,10 +14,10 @@ El programa consiste en solicitar los datos al usuario:
 - Se solicita el número de propiedades **sólo si tiene propiedades**
 
 Se hará un recargo en porcentaje del precio base de la cotización, por los siguientes conceptos:
-edad 
-edad del cónyuge
-No. de hijos
-No. de propiedades
+- edad 
+- edad del cónyuge
+- No. de hijos
+- No. de propiedades
 
 Se hará un recargo en porcentaje del monto del salario.
 
